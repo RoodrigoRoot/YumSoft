@@ -13,7 +13,7 @@ class Dialog(QDialog):
         self.db.setHostName("localhost")
         self.db.setUserName("rod")
         self.db.setPassword("forever11")
-        self.db.setDatabaseName("dbpasdos")
+        self.db.setDatabaseName("dbpos")
         if self.db.open():
             uic.loadUi("login.ui",self)
         else:
@@ -31,9 +31,11 @@ class Dialog(QDialog):
             self.label.setText("Problemas de conexión")
             self.pushButton.setText("Aceptar")
             self.pushButton.clicked.connect(self.button_error_conection)
+        self.PBClose.clicked.connect(self.button_error_conection)
 
     def button_error_conection(self):
         self.close()
+        
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     dialog = Dialog()
