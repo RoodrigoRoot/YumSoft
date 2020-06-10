@@ -7,41 +7,31 @@
     <x>0</x>
     <y>0</y>
     <width>1529</width>
-    <height>833</height>
+    <height>832</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>YumSoft</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QGroupBox" name="groupBox">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>131</width>
-      <height>801</height>
+      <x>890</x>
+      <y>290</y>
+      <width>121</width>
+      <height>151</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#b2bec3;</string>
-    </property>
-    <property name="title">
+    <property name="text">
      <string/>
     </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>111</width>
-       <height>101</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
+    <property name="pixmap">
+     <pixmap>img/naturaleza.png</pixmap>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
