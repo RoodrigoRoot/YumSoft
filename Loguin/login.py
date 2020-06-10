@@ -50,15 +50,11 @@ class Dialog(QDialog):
         if LoginMethods.access_system(self.LEPassword_login):
             self.show_main()
             self.close()
-        else:
-            self.a()
             
     def clicked_botton_enter(self):
         if LoginMethods.access_system(self.LEPassword_login):
             self.show_main()
             self.close()
-        else:
-            self.a()
         
     def button_error_conection(self):
         self.close()
