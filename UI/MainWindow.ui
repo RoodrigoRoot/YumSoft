@@ -6,26 +6,42 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1103</width>
-    <height>530</height>
+    <width>1529</width>
+    <height>833</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>180</y>
-      <width>67</width>
-      <height>17</height>
+      <x>0</x>
+      <y>0</y>
+      <width>131</width>
+      <height>801</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Principal</string>
+    <property name="styleSheet">
+     <string notr="true">background-color:#b2bec3;</string>
     </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>111</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -33,12 +49,84 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1103</width>
+     <width>1529</width>
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuUsuarios">
+    <property name="title">
+     <string>Usuarios</string>
+    </property>
+    <addaction name="actionVer_Usuario"/>
+    <addaction name="actionAgregar_Usuario"/>
+    <addaction name="actionModificar_usuario"/>
+    <addaction name="actionEliminar_Usuario"/>
+   </widget>
+   <widget class="QMenu" name="menuProductos">
+    <property name="title">
+     <string>Productos</string>
+    </property>
+    <addaction name="actionConsultar_Producto"/>
+    <addaction name="actionAgregar_Producto"/>
+    <addaction name="actionAgregar_Producto_2"/>
+    <addaction name="actionEliminar_Producto"/>
+   </widget>
+   <widget class="QMenu" name="menuAlmacen">
+    <property name="title">
+     <string>Almacen</string>
+    </property>
+    <addaction name="actionConsultar_Almacen"/>
+   </widget>
+   <addaction name="menuUsuarios"/>
+   <addaction name="menuProductos"/>
+   <addaction name="menuAlmacen"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionVer_Usuario">
+   <property name="text">
+    <string>Consultar Usuario</string>
+   </property>
+  </action>
+  <action name="actionConsultar_Producto">
+   <property name="text">
+    <string>Consultar Producto</string>
+   </property>
+  </action>
+  <action name="actionAgregar_Producto">
+   <property name="text">
+    <string>Agregar Producto</string>
+   </property>
+  </action>
+  <action name="actionAgregar_Producto_2">
+   <property name="text">
+    <string>Modificar Producto</string>
+   </property>
+  </action>
+  <action name="actionEliminar_Producto">
+   <property name="text">
+    <string>Eliminar Producto</string>
+   </property>
+  </action>
+  <action name="actionEliminar_Usuario">
+   <property name="text">
+    <string>Eliminar Usuario</string>
+   </property>
+  </action>
+  <action name="actionModificar_usuario">
+   <property name="text">
+    <string>Modificar Usuario</string>
+   </property>
+  </action>
+  <action name="actionAgregar_Usuario">
+   <property name="text">
+    <string>Agregar Usuario</string>
+   </property>
+  </action>
+  <action name="actionConsultar_Almacen">
+   <property name="text">
+    <string>Consultar Almacen</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

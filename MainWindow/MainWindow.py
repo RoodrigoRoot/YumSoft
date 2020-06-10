@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'MainWindow.ui'
+# Form implementation generated from reading ui file 'UI/MainWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.0
 #
@@ -14,20 +14,53 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1103, 530)
+        MainWindow.resize(1529, 833)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(490, 180, 67, 17))
-        self.label.setObjectName("label")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1103, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1529, 22))
         self.menubar.setObjectName("menubar")
+        self.menuUsuarios = QtWidgets.QMenu(self.menubar)
+        self.menuUsuarios.setObjectName("menuUsuarios")
+        self.menuProductos = QtWidgets.QMenu(self.menubar)
+        self.menuProductos.setObjectName("menuProductos")
+        self.menuAlmacen = QtWidgets.QMenu(self.menubar)
+        self.menuAlmacen.setObjectName("menuAlmacen")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.actionVer_Usuario = QtWidgets.QAction(MainWindow)
+        self.actionVer_Usuario.setObjectName("actionVer_Usuario")
+        self.actionConsultar_Producto = QtWidgets.QAction(MainWindow)
+        self.actionConsultar_Producto.setObjectName("actionConsultar_Producto")
+        self.actionAgregar_Producto = QtWidgets.QAction(MainWindow)
+        self.actionAgregar_Producto.setObjectName("actionAgregar_Producto")
+        self.actionAgregar_Producto_2 = QtWidgets.QAction(MainWindow)
+        self.actionAgregar_Producto_2.setObjectName("actionAgregar_Producto_2")
+        self.actionEliminar_Producto = QtWidgets.QAction(MainWindow)
+        self.actionEliminar_Producto.setObjectName("actionEliminar_Producto")
+        self.actionEliminar_Usuario = QtWidgets.QAction(MainWindow)
+        self.actionEliminar_Usuario.setObjectName("actionEliminar_Usuario")
+        self.actionModificar_usuario = QtWidgets.QAction(MainWindow)
+        self.actionModificar_usuario.setObjectName("actionModificar_usuario")
+        self.actionAgregar_Usuario = QtWidgets.QAction(MainWindow)
+        self.actionAgregar_Usuario.setObjectName("actionAgregar_Usuario")
+        self.actionConsultar_Almacen = QtWidgets.QAction(MainWindow)
+        self.actionConsultar_Almacen.setObjectName("actionConsultar_Almacen")
+        self.menuUsuarios.addAction(self.actionVer_Usuario)
+        self.menuUsuarios.addAction(self.actionAgregar_Usuario)
+        self.menuUsuarios.addAction(self.actionModificar_usuario)
+        self.menuUsuarios.addAction(self.actionEliminar_Usuario)
+        self.menuProductos.addAction(self.actionConsultar_Producto)
+        self.menuProductos.addAction(self.actionAgregar_Producto)
+        self.menuProductos.addAction(self.actionAgregar_Producto_2)
+        self.menuProductos.addAction(self.actionEliminar_Producto)
+        self.menuAlmacen.addAction(self.actionConsultar_Almacen)
+        self.menubar.addAction(self.menuUsuarios.menuAction())
+        self.menubar.addAction(self.menuProductos.menuAction())
+        self.menubar.addAction(self.menuAlmacen.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -35,7 +68,18 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "Principal"))
+        self.menuUsuarios.setTitle(_translate("MainWindow", "Usuarios"))
+        self.menuProductos.setTitle(_translate("MainWindow", "Productos"))
+        self.menuAlmacen.setTitle(_translate("MainWindow", "Almacen"))
+        self.actionVer_Usuario.setText(_translate("MainWindow", "Consultar Usuario"))
+        self.actionConsultar_Producto.setText(_translate("MainWindow", "Consultar Producto"))
+        self.actionAgregar_Producto.setText(_translate("MainWindow", "Agregar Producto"))
+        self.actionAgregar_Producto_2.setText(_translate("MainWindow", "Modificar Producto"))
+        self.actionEliminar_Producto.setText(_translate("MainWindow", "Eliminar Producto"))
+        self.actionEliminar_Usuario.setText(_translate("MainWindow", "Eliminar Usuario"))
+        self.actionModificar_usuario.setText(_translate("MainWindow", "Modificar Usuario"))
+        self.actionAgregar_Usuario.setText(_translate("MainWindow", "Agregar Usuario"))
+        self.actionConsultar_Almacen.setText(_translate("MainWindow", "Consultar Almacen"))
 
 
 if __name__ == "__main__":

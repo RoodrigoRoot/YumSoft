@@ -8,7 +8,8 @@ from DB.connection import connection_DB
 from MainWindow.MainWindow import Ui_MainWindow
 from logger import logger
 from .utils import LoginMethods
-
+import threading
+import time
 
 
 
@@ -18,7 +19,7 @@ class Dialog(QDialog):
         self.window = QMainWindow()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.window)
-        self.window.show()  
+        self.window.showMaximized()
     
     def __init__(self):
         QDialog.__init__(self)
@@ -50,19 +51,35 @@ class Dialog(QDialog):
         if LoginMethods.access_system(self.LEPassword_login):
             self.show_main()
             self.close()
+        else:
+            stl = "border:1px solid red; background-color:white;"
+            self.LEPassword_login.setStyleSheet(stl)
+            self.LIncorrect.setText("Contraseña Incorrecta")
+            self.LEPassword_login.setText("")
+            threading.Timer(2, self.change_text).start()
             
     def clicked_botton_enter(self):
         if LoginMethods.access_system(self.LEPassword_login):
             self.show_main()
             self.close()
-        
+        else:
+            stl = "border:1px solid red; background-color:white;"
+            self.LEPassword_login.setStyleSheet(stl)
+            self.LIncorrect.setText("Contraseña Incorrecta")
+            self.LEPassword_login.setText("")
+            threading.Timer(2, self.change_text).start()
+            
+    def change_text(self):
+        self.LIncorrect.setText("Intente de nuevo")
+    
+
     def button_error_conection(self):
         self.close()
         
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     dialog = Dialog()
-    dialog.show()
+    dialog.showFullScreen()
     app.exec_()
     
 
