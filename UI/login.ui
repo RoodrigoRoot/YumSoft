@@ -99,7 +99,7 @@ border-radius:0px;</string>
    <property name="title">
     <string/>
    </property>
-   <widget class="QLineEdit" name="LEPassword">
+   <widget class="QLineEdit" name="LEPassword_login">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -176,7 +176,7 @@ background:white;
       <normaloff>img/cerrar.png</normaloff>img/cerrar.png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pbEnter">
     <property name="geometry">
      <rect>
       <x>220</x>
